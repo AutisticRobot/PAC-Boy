@@ -2,6 +2,14 @@
 #include <iostream>
 #include <chrono>
 #include <ctime>
+#include <map>
+
+std::map<int, string> Alarms = 
+{
+    //{time, sound folder}
+};
+string getRandSoundFromFolder(string folder):
+
 
 int main(int argc, char *argv[])
 {
@@ -9,4 +17,9 @@ int main(int argc, char *argv[])
     
 
     return 0;
+}
+
+string getRandSoundFromFolder(string folder)
+{
+    return "";
 }
