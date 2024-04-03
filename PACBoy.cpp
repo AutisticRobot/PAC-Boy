@@ -4,11 +4,12 @@
 #include <ctime>
 #include <map>
 
-std::map<int, string> Alarms = 
+std::map<int, std::string> Alarms = 
 {
     //{time, sound folder}
 };
-string getRandSoundFromFolder(string folder):
+std::string getRandSoundFromFolder(std::string folder);
+void loadAlarmsFromFile(std::string File);
 
 
 int main(int argc, char *argv[])
@@ -19,7 +20,12 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-string getRandSoundFromFolder(string folder)
+std::string getRandSoundFromFolder(std::string folder)
 {
     return "";
+}
+
+void loadAlarmsFromFile(std::string File)
+{
+
 }
