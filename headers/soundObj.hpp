@@ -3,3 +3,4 @@
 #include <thread>
 
 void playSoundFile(std::string File);
+void endSound();

@@ -1,8 +1,22 @@
 #include "headers/soundObj.hpp"
 
-void playSoundFile(std::string File)
+
+class soundObj
 {
-    std::cout <<  "[*Play " << File << "*]" << std::endl;
-    std::this_thread::sleep_for(std::chrono::seconds(3));
-    std::cout << "[*End Sound*]" << std::endl;
-}
+    bool isPlaying = false;
+
+    void playSoundFile(std::string File)
+    {
+        std::cout <<  "[*Play " << File << "*]" << std::endl;
+        isPlaying = true;
+        std::this_thread::sleep_for(std::chrono::seconds(3));
+        endSound();
+    }
+
+    void endSound()
+    {
+        isPlaying = false;
+        std::cout << "[*End Sound*]" << std::endl;
+
+    }
+};
