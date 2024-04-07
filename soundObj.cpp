@@ -1,22 +1,30 @@
 #include "headers/soundObj.hpp"
 
 
-class soundObj
+    //namespace soundObj
+    //{
+soundObj::soundObj(std::string soundFile)
 {
-    bool isPlaying = false;
+    this->soundFile = soundFile;
+}
 
-    void playSoundFile(std::string File)
-    {
-        std::cout <<  "[*Play " << File << "*]" << std::endl;
-        isPlaying = true;
-        std::this_thread::sleep_for(std::chrono::seconds(3));
-        endSound();
-    }
+void soundObj::playSoundFile()
+{
+    playSoundFile(soundFile);
+}
+void soundObj::playSoundFile(std::string File)
+{
+    system("clear");
+    std::cout <<  "[*Play " << File << "*]" << std::endl;
+    isPlaying = true;
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+    endSound();
+}
 
-    void endSound()
-    {
-        isPlaying = false;
-        std::cout << "[*End Sound*]" << std::endl;
+void soundObj::endSound()
+{
+    isPlaying = false;
+    std::cout << "[*End Sound*]" << std::endl;
 
-    }
-};
+}
+    //}
