@@ -5,6 +5,7 @@
 #include <thread>
 //#include <stdlib.h>
 #include <cstdlib>
+//#include "SDL2/SDL_mixer.h" // need to update the makefile and learn this lib before uncommenting
 
 
 class soundObj
