@@ -13,6 +13,7 @@ soundObj sound = soundObj("metalpipe.mp3");
 
 std::string getRandSoundFromFolder(std::string folder);
 void loadAlarmsFromFile(std::string File);
+bool sysTimeIs();
 
 
 
@@ -22,6 +23,9 @@ int main(int argc, char *argv[])
     std::cout << Alarms[0][0] << std::endl;
 
     sound.playSoundFile();
+
+    sysTimeIs();
+
     std::cout << "Getting Next Sound" << std::endl;
     std::this_thread::sleep_for(std::chrono::seconds(1));
     sound.playSoundFile("oof.mp3");
@@ -40,4 +44,12 @@ void loadAlarmsFromFile(std::string File)
     {
         {300, "alarm"},
     };
+}
+
+bool sysTimeIs()
+{
+    std::cout << "Time is "; //<< (std::string)std::chrono::system_clock::now();
+
+    return true;
+
 }
