@@ -29,6 +29,7 @@ int main(int argc, char *argv[])
     std::cout << "Getting Next Sound" << std::endl;
     std::this_thread::sleep_for(std::chrono::seconds(1));
     sound.playSoundFile("oof.mp3");
+    sysTimeIs();
 
     return 0;
 }
@@ -48,7 +49,8 @@ void loadAlarmsFromFile(std::string File)
 
 bool sysTimeIs()
 {
-    std::cout << "Time is "; //<< (std::string)std::chrono::system_clock::now();
+    auto const nowTime = std::chrono::system_clock::now();
+    std::cout << "Time is " << std::chrono::system_clock::to_time_t(nowTime);
 
     return true;
 
