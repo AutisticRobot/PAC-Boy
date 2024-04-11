@@ -10,6 +10,7 @@
 
 std::map<int, std::string> Alarms;//{time, sound folder}
 soundObj sound = soundObj("metalpipe.mp3");
+bool running = true;
 
 std::string getRandSoundFromFolder(std::string folder);
 void loadAlarmsFromFile(std::string File);
@@ -19,6 +20,10 @@ bool sysTimeIs();
 
 int main(int argc, char *argv[])
 {
+    while (running)
+    {
+    
+    
     std::cout << "Hello World! :]\n";
     std::cout << Alarms[0][0] << std::endl;
 
@@ -29,7 +34,19 @@ int main(int argc, char *argv[])
     std::cout << "Getting Next Sound" << std::endl;
     std::this_thread::sleep_for(std::chrono::seconds(1));
     sound.playSoundFile("oof.mp3");
+
     sysTimeIs();
+
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+
+    std::string fileName;
+
+    std::cout << "\nEnter New File Name:";
+    std::cin >> fileName;
+
+    sound.playSoundFile(fileName);
+
+    }
 
     return 0;
 }
