@@ -17,7 +17,7 @@ void soundObj::playSoundFile(std::string File)
     system("clear");
     std::cout <<  "[*Playing " << File << "*]" << std::endl;
     isPlaying = true;
-    std::this_thread::sleep_for(std::chrono::seconds(3));
+    std::this_thread::sleep_for(std::chrono::seconds(1));
     endSound();
 }
 
