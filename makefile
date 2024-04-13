@@ -1,9 +1,10 @@
 CC = g++
 
+PACBoy:build/PACBoy
+	./build/PACBoy
+
 build/PACBoy:build/PACBoy.o build/soundObj.o
 	$(CC) $^ -o $@
-	clear
-	./$@
 
 build/PACBoy.o:PACBoy.cpp
 	$(CC) -c $< -o $@

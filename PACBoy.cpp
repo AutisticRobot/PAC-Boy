@@ -68,11 +68,16 @@ std::string checkForAlarm()
 
 std::string getRandFileFromFolder(std::string folder)
 {
+    std::cout << "Picking Random Sound From (" << folder << ")";
+
+
+
     return "";
 }
 
 void loadAlarmsFromFile(std::string File)
 {
+    std::cout << "Loading alarms From (" << File << ")";
     Alarms = 
     {
         {300, "alarm"},
